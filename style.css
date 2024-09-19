@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #007bff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 0 20px;
+  position: relative;
+}
+
+.start-btn button {
+  /* display: none; */
+  background-color: #fff;
+  color: #007bff;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Rule section */
+.rule-section,
+.quiz-section,
+.result-section {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.rule-section {
+  display: none;
+  /* pointer-events: none; */
+}
+
+.rule-header {
+  padding: 18px 35px;
+  border-bottom: 1px solid #ccc;
+}
+
+.rule-list {
+  padding: 20px 45px 20px;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1.0625rem;
+}
+
+.quiz-info .duration {
+  font-weight: 600;
+  color: rgb(9, 123, 193);
+}
+
+.rule-footer,
+.quiz-footer {
+  border-top: 1px solid #ccc;
+  padding: 15px 30px;
+}
+
+.rule-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(9, 123, 193);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.btn-exit {
+  background: transparent;
+  color: rgb(9, 123, 193);
+  border: 1px solid rgb(9, 123, 193);
+}
+
+.btn-exit:hover {
+  background-color: rgb(9, 123, 193);
+  color: #fff;
+}
+
+.btn-continue:hover {
+  background-color: #07305d;
+}
+
+/* Quiz section */
+.quiz-section {
+  display: none;
+  width: 550px;
+  /* pointer-events: none; */
+}
+
+.quiz-header {
+  padding: 18px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header h3 {
+  font-size: 1.35rem;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #afd4fc;
+  color: #007bff;
+  padding: 8px;
+  font-size: 1.125rem;
+  border-radius: 5px;
+}
+
+.time-sec {
+  background-color: #1e1c1c;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.quiz-info {
+  padding: 30px 35px 40px;
+}
+
+.quiz-info .option-list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 25px;
+}
+
+.quiz-info .option {
+  background-color: rgb(222, 243, 236);
+  padding: 9px 15px;
+  cursor: pointer;
+  border: 1px solid rgb(67, 185, 146);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.quiz-info .option:hover {
+  background-color: #afd4fc;
+  color: #004085;
+}
+
+.quiz-info .option p {
+  pointer-events: none;
+}
+
+.quiz-info .option .icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  display: grid;
+  place-content: center;
+  pointer-events: none;
+}
+
+.quiz-info .icon.check {
+  color: #23903c;
+  border-color: #23903c;
+  background: #d4edda;
+}
+
+.quiz-info .icon.times {
+  color: #a42834;
+  border-color: #a42834;
+  background: #f8d7da;
+}
+
+.quiz-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quiz-footer span {
+  font-weight: 600;
+}
+
+.quiz-footer .next-btn:hover {
+  background: #004085;
+}
+
+/* result section */
+.result-section {
+  display: none;
+  width: 480px;
+  overflow: hidden;
+  padding: 40px 30px;
+  text-align: center;
+  /* pointer-events: none; */
+}
+
+.result-section .icon {
+  font-size: 7.5rem;
+  color: rgb(9, 123, 193);
+}
+
+.result-section p {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.result-section .completed-text {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.result-section .score-text {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.score-text .bold {
+  font-weight: 700;
+  color: #000;
+  padding: 0 4px;
+}
+
+.result-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.result-btns .btn {
+  font-size: 1rem;
+}
